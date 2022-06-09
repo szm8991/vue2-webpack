@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <h1>{{count+1}}</h1>
-    <h1>{{count+2}}</h1>
-    <button @click="plus(1)">+</button>
-    <button @click="minus(2)">-</button>
-    <button @click="add100">ADD 100</button>
-  </div>
+  <!-- 这是一段注释 -->
+  <h1>{{count+1}}</h1>
+  <h1>{{count+2}}</h1>
+  <button @click="plus(1)">+</button>
+  <button @click="minus(2)">-</button>
+  <!-- <button @click="add100">ADD 100</button> -->
 </template>
 
 <script>
@@ -18,10 +17,12 @@ export default {
   },
   methods: {
     plus(num) {
-      this.count += num;
+      console.log("plus");
+      this.$data.count += num;
     },
     minus(num) {
-      this.count -= num;
+      console.log("minus");
+      this.$data.count -= num;
     },
     add100() {
       this.count += 100;
@@ -29,6 +30,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>
